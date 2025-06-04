@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+.button-interactive {
+  background-color: #305b7b; /* لون النافبار */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  box-shadow: 0 4px 6px rgba(48, 91, 123, 0.4); /* ظل خفيف */
+}
+
+.button-interactive:hover {
+  background-color: #2a4969; /* لون أغمق شوي لما تحوم بالماوس */
+}
+
+.button-interactive:active {
+  background-color: #1f3f5a; /* لون أغمق عند الضغط */
+  box-shadow: none; /* إزالة الظل عند الضغط */
+}/* تأثر حركة اللوجو */
+/* تأثر حركة اللوجو */
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0);  /* يبدأ صغيرًا جدًا */
+    opacity: 0;           /* يبدأ شفاف */
+  }
+  50% {
+    transform: scale(2);  /* يصبح أكبر */
+    opacity: 1;           /* يصبح مرئيًا */
+  }
+  100% {
+    transform: scale(1);  /* يعود لحجمه الطبيعي */
+    opacity: 0;           /* يتلاشى تدريجيًا */
+  }
+}
+
+/* تطبيق الأنيميشن على اللوجو */
+.logo-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.animated-logo {
+  animation: logoAnimation 3s ease-in-out forwards;  /* تحديد الأنيميشن ووقته */
+  transition: transform 0.5s ease-in-out;
+}
